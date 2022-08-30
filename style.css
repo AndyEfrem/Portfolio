@@ -72,3 +72,14 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+.scrolling {
+  background: black;
+  opacity: 30%;
+  transition: 0.5s;
+}
+
+form{
+  width: 50%;
+  align-self: center;
+}

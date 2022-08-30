@@ -48,24 +48,25 @@
 <body class="bg-dark">
   <div class="banner-wrap vw-100 vh-100 text-white">
     <div class="overlay"></div>
-    <header class="px-5 p-3 text-white">
+    <header class="px-5 p-3 text-white fixed-top scrolling">
       <div>
         <h3 class="float-md-start text-center">Portfolio</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#About-us">About us</a>
+          <a class="nav-link" href="#Projects">Projects</a>
+          <a class="nav-link" href="#Contact-us">Contact</a>
         </nav>
       </div>
     </header>
       
       <main class="d-flex flex-column text-center justify-content-center h-75 text-center"> 
        <h1 class="display-1">I am Anderson Efrem.</h1>
-       <p class="lead">Full stack developer. Safety officer. Enterpreneur</p>
+       <span id="typed" class="lead"></span>
       
       </main>
      </div>
-     <section>
+     <section id="About-us">
       <div class="container p-5">
         <div class="card">
           <div class="card-body">
@@ -97,13 +98,13 @@
               </div>
               <div class="col-md-6" mt-3>
                 <h1 class="text-center text-md-start"><mark>About me</mark></h1>
-                <p class="lead">
-                  I am a full stack web developer student.I spend my whole day, practically every day, experimenting with HTML, CSS, and dabbling with Python; pushing and pulling my codes from Github. I build clone websites to improve my skills in web development. I do it well.
+                <p>
+                  I am a full stack developer student. I spend my day experimenting with HTML, CSS, dabbling with Python, pushing and pulling my codes from Github. I build clone websites to improve my skills in front end development. 
                 </p>
               </div>
          </div> 
     </section>
-    <section>
+    <section id="Projects">
       <div class="container">
         <h1 class="text-center p-3"><mark>Projects</mark></h1>
         <div class="row">
@@ -154,7 +155,7 @@
         </div> 
       </div>
     </section>
-    <section>
+    <section id="Contact-us">
       <div class="container p-5">
         <div class="card p-3">
           <div class="card-body px-5 text-center">
@@ -193,6 +194,34 @@
         </div>
       </div>
     </section>
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-3">
+        <p>
+          Developed by Anderson Efrem using Bootstrap.
+        </p>
+      </div>
+    </footer>
+    <script>
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        header.classList.toggle("scrolling", window.scrollY > 0);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        strings: [
+          "Fullstack Developer.",
+          "Safety officer.",
+          "Entrepreneur."
+        ],
+        loop: true,
+        typeSpeed: 75,
+        shuffle: true
+      });
+    </script>
+    </script>
   </body>
   </html>
   
